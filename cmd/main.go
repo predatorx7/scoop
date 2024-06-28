@@ -1,9 +1,13 @@
 package main
 
 import (
-	"github.com/predatorx7/scoop/pkg/libscoop"
+	"fmt"
+
+	"github.com/predatorx7/scoop/internal/pkg/cli"
 )
 
 func main() {
-	libscoop.Scoop()
+	cli.Cli()
+
+	fmt.Printf("input: %s, output: %s\n", cli.GetInputDirectoryPath(), cli.GetOutputDirectoryPath())
 }
